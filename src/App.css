@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: rgb(242, 242, 242);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.main-area{
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*----------------SearchScreen start --------------*/
+
+.select{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-end;
+  width: 60%;
+  margin-left: 20%;
 }
 
-.App-link {
-  color: #61dafb;
+.select .select-filter{
+  margin:2rem 10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.select .sort-filter{
+  margin:2rem 10%;
 }
+
+/*----------------SearchScreen end --------------*/
+
+/* ------------ ProductScreen start------------*/
+.product-info{
+  display: flex;
+}
+.product-detail button{
+  background-color: burlywood;
+  width: 400px;
+  font-size: 1rem;
+}
+
+.banner-image img{
+  width: 90%;
+  margin-left: 5%;
+
+}
+
+/* ------------ ProductScreen end------------*/
+
+
+
+/*----------------- cart start ------------*/
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  align-items: flex-start;
+}
+.cart-list {
+  flex: 3 1 60rem;
+}
+.cart-action {
+  flex: 1 1 20rem;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.cart-list-container {
+  padding: 0;
+  list-style-type: none;
+  padding: 1rem;
+}
+.cart-list-container li {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+.cart-list-container li img {
+  max-width: 10rem;
+  max-height: 10rem;
+}
+.cart-list-container li:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cart-image {
+  flex: 1 1;
+}
+.cart-name {
+  flex: 8 1;
+}
+
+.cart-name button{
+  font-size: 1rem;
+  padding: 2px;
+  margin: auto 1rem;
+}
+
+.cart-name .product-link{
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.cart-price {
+  flex: 1 1;
+  font-size: 2.5rem;
+  text-align: right;
+}
+
+.category-links{
+  margin: 2rem auto;
+}
+.category-link{
+  text-decoration: none;
+  margin: 2rem 2rem;
+}
+
+
+/* ------------ cart start------------*/
