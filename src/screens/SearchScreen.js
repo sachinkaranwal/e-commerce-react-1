@@ -43,9 +43,7 @@ const SearchScreen = () =>{
         setBrandFilter(item.text);
     }
     return(
-    <div >
-        <Navbar />
-        
+    <div >        
         <div className="select">
             <h1>{category}</h1>
             <div className="select-filter">

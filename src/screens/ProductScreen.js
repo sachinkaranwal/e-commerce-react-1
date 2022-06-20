@@ -20,7 +20,6 @@ function ProductScreen() {
 
     return (
         <div>
-            <Navbar />
         {/* go back to the previous page- home/products*/}
         {/* <Link to='/search/laptops' >Go back</Link> */}
         <div className="ms-Grid product-info main-area">
