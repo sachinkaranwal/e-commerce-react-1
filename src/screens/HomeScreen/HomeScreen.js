@@ -39,6 +39,7 @@ const HomeScreen = ({ history }) => {
                 image={item.image}
                 price={item.price}
                 brand={item.brand}
+                isHome
               />
             </div>
           ))}
