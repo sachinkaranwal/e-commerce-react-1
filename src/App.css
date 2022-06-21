@@ -15,38 +15,11 @@ body{
 
 /*----------------SearchScreen start --------------*/
 
-.select{
-  display: flex;
-  align-items: flex-end;
-  width: 60%;
-  margin-left: 20%;
-}
-
-.select .select-filter{
-  margin:2rem 10%;
-}
-
-.select .sort-filter{
-  margin:2rem 10%;
-}
 
 /*----------------SearchScreen end --------------*/
 
 /* ------------ ProductScreen start------------*/
-.product-info{
-  display: flex;
-}
-.product-detail button{
-  background-color: burlywood;
-  width: 400px;
-  font-size: 1rem;
-}
 
-.banner-image img{
-  width: 90%;
-  margin-left: 5%;
-
-}
 
 /* ------------ ProductScreen end------------*/
 
@@ -113,14 +86,6 @@ body{
   flex: 1 1;
   font-size: 2.5rem;
   text-align: right;
-}
-
-.category-links{
-  margin: 2rem auto;
-}
-.category-link{
-  text-decoration: none;
-  margin: 2rem 2rem;
 }
 
 

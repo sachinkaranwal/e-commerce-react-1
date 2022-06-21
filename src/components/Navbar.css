@@ -1,10 +1,23 @@
+.navContainer {
+    background-color: #434f78;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    /* line-height: 1.5; */
+}
+
 .navbar{
-    background: rgb(35,47,62);
+    /* background: rgb(35,47,62); */
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    padding: 15px 0;
+}
+
+.searchbar .__SearchBar-searchBarDiv .__SearchBar-SearchSelect{
+    width: 125px;
 }
 
 .navbar .brand-name{

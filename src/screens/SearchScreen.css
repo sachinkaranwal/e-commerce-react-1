@@ -1,0 +1,27 @@
+
+
+.select{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    margin: 1rem 2rem;
+    text-transform: uppercase;
+  }
+  
+  .select .filters{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+  }
+
+  .select .select-filter{
+    /* margin:2rem 10%; */
+    width: 40%;
+  }
+  
+  .select .sort-filter{
+    /* margin:2rem 10%; */
+    width: 40%;
+  }
+  
