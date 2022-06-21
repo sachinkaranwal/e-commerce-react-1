@@ -1,15 +1,17 @@
 import { Route,Switch,Redirect } from 'react-router-dom';
 import './App.css';
-import HomeScreen from './screens/HomeScreen';
+import HomeScreen from './screens/HomeScreen/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import CheckoutScreen from './screens/CheckoutScreen';
 import CartScreen from './screens/CartScreen';
 import SearchScreen from './screens/SearchScreen';
 import ProductScreen from './screens/ProductScreen';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
+     <Header />
       <Switch>
         <Route exact path='/' >
         <Redirect to='/home' />

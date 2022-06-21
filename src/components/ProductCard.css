@@ -6,16 +6,24 @@
     width: 100%;
     z-index: 1;
     margin-top:2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .product .product-link{
     text-decoration: none;
     color: black;
+    width: 100%;
 }
 
+/* .product .product-link .productImg {
+    width: 60%;
+} */
+
 .product .product-info{
-    margin: 2rem ;
+    margin: 0 2rem;
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
      /* letter-spacing: 1px; */
 }
 .product .product-link .product-price{
@@ -34,10 +42,10 @@
     margin-top: 5px;
 }
 .product .product-link >img{
-    max-height: 200px;
+    max-height: 150px;
     width: 100%;
     object-fit: contain;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .product > button {

@@ -1,0 +1,19 @@
+.category-links{
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    background-color: #3a4468;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .category-link{
+    text-decoration: none;
+    color: white;
+  }
+
+   .activeLink {
+    color: #f3c93e;
+  }
+
+  .category-link:hover {
+    color: #f3c93e;
+  }
