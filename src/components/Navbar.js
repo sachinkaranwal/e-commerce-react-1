@@ -1,32 +1,34 @@
 import { Link, useHistory } from "react-router-dom";
 import "./Navbar.css";
-import { SearchBar, Select } from "@copart/core-components";
+import { SearchBar } from "@copart/core-components";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = (props) => {
-  console.log(props);
-  const history = useHistory();
-  console.log(history);
-
+  const history = useHistory();  
+  const allCategories = useSelector((state) => state.allCategories);
   const cartCount = useSelector((state) => state.cart.cartItems.length);
-
   const [searchKeyword, setSearchKeyword] = useState("");
-
+  const [searchedCategory, setSearchedCategory] = useState("");
   useEffect(() => {
-    if (searchKeyword) {
-      history.push("");
-      history.push(`search/category/${searchKeyword}/brand/all/order/featured`);
+    if (searchedCategory) {
+      history.push(`/search?category=${searchedCategory}&brand=all&order=featured`);
     }
-  }, [searchKeyword]);
+  }, [searchedCategory]);
 
   const searchHandler = (search) => {
-    console.log(search.searchText);
+    if(search.searchText.length > 2) {
+      allCategories.forEach(category => {
+        if( category.includes(search.searchText)){
+          setSearchedCategory(category)
+          console.log("category ",category)
+        }
+      })
+    }
     setSearchKeyword(search.searchText);
   };
   const handleSearchTypeChange = (searchType) => {
-    console.log("Search type changed to ", searchType);
+    setSearchedCategory(searchType.key)
   };
   return (
     <div className="navContainer">
@@ -38,13 +40,15 @@ const Navbar = (props) => {
           <SearchBar
             searchText={""}
             searchTypes={[
-              { key: "k1", text: "Laptops" },
-              { key: "k2", text: "Headphones" },
+              { key: "laptops", text: "Laptops" },
+              { key: "headphones", text: "Headphones" },
+              { key: "mobiles", text: "Mobiles" },
+              { key: "shoes", text: "Shoes" },
             ]}
-            searchType={{ key: "k1", text: "Laptops" }}
+            searchType={{ key: "laptops", text: "Laptops" }}
             onSearchTypeChange={handleSearchTypeChange}
             handleSearch={searchHandler}
-            showSuggestions={[]}
+            showSuggestions={['headphones']}
             searchResultsFetcher={""}
           />
         </div>

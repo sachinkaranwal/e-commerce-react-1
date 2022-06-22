@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useParams, useHistory } from "react-router";
 import { Link } from "react-router-dom";
-import productsList from "../components/productsList";
-import Navbar from "../components/Navbar";
-import { addItemsToCart } from "../actions/cartAction";
+import productsList from "../../components/productsList";
+import Navbar from "../../components/Navbar";
+import { addItemsToCart } from "../../actions/cartAction";
 import { useDispatch } from "react-redux";
 import "office-ui-fabric-react/dist/css/fabric.css";
 import "./ProductScreen.css";

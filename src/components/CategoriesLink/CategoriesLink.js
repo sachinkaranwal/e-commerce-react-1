@@ -1,21 +1,39 @@
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 import './CategoriesLink.css'
 
 const CategoriesLink = () => {
+  const history = useHistory()
+  const [category, setCategory] = useState('')
+  
+  const isHomePage = useSelector((state) => state.isHomePage);
+  useEffect(() => {
+    if(category !== '') {
+      history.push(`/search?category=${category}&brand=all&order=featured`)
+    }
+  },[category])
+
+  useEffect(() => {
+    if(isHomePage) {
+      setCategory('')
+    }
+  },[isHomePage])
+
   return (
     <div className="category-links">
-      <NavLink activeClassName="activeLink" className="category-link" to="/search/category/laptops">
+      <a  className="category-link" onClick={() => { console.log("Hi"); setCategory('laptops') } } >
         Laptops
-      </NavLink>
-      <NavLink activeClassName="activeLink" className="category-link" to="/search/category/headphones">
+      </a>
+      <a  className="category-link" onClick={() => setCategory('headphones') } >
         Headphones
-      </NavLink>
-      <NavLink activeClassName="activeLink" className="category-link" to="/search/category/mobiles">
+      </a>
+      <a  className="category-link" onClick={() => setCategory('mobiles') } >
         Mobiles
-      </NavLink>
-      <NavLink activeClassName="activeLink" className="category-link" to="/search/category/shoes">
+      </a>
+      <a  className="category-link" onClick={() => setCategory('shoes') } >
         Shoes
-      </NavLink>
+      </a>
     </div>
   );
 };

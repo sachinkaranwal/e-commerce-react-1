@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import "office-ui-fabric-react/dist/css/fabric.css";
 import ProductCard from "../components/ProductCard";
 import { Select } from "@copart/core-components";
@@ -7,36 +6,37 @@ import { getProductsList } from "../actions/productsListAction";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { brandOptions, pricingOptions } from "../constants/selectBarConstants";
-import { useParams } from "react-router-dom";
 import "./SearchScreen.css";
 
 const SearchScreen = () => {
-  let { category = "all", brand = "all", order = "featured" } = useParams();
-
+  const history = useHistory()
   const productsList = useSelector((state) => state.productsList.productsList);
-  const history = useHistory();
-
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  const  { category = "laptops", brand = "all", order = "featured" } = params
   const dispatch = useDispatch();
-  const [options, setOptions] = useState(brandOptions[category]);
+  const [options, setOptions] = useState(category === 'all' ? [] : brandOptions[category]);
   const [priceOptions, setPriceOptions] = useState(pricingOptions);
-  const [filterOptions, setFilterOptions] = useState([]);
-  const [brandFilter, setBrandFilter] = useState(brand);
-  const [sortFilter, setSortFilter] = useState("Featured");
-
+  const [brandFilter, setBrandFilter] = useState('all');
+  const [sortFilter, setSortFilter] = useState('featured');
   useEffect(() => {
     dispatch(
       getProductsList({ category, brand: brandFilter, order: sortFilter })
     );
+    
     history.push(
-      `/search/category/${category}/brand/${brand}/order/${sortFilter}`
+      `/search?category=${category}&brand=${brandFilter}&order=${sortFilter}`
     );
-  }, [category,history]);
+  }, [category, brandFilter, sortFilter]);
+
+  useEffect(() => {
+    setOptions(brandOptions[category])
+    setBrandFilter('all')
+    setSortFilter('featured')
+  },[category])
 
   const handleSortFilterChange = (event, item) => {
     setSortFilter(item.text);
-    history.push(
-        `/search/category/${category}/brand/${brand}/order/${sortFilter}`
-      );
   };
   const handleBrandFilterChange = (event, item) => {
     setBrandFilter(item.text);

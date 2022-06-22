@@ -4,10 +4,14 @@ import { productsListReducer } from '../reducer/productsListReducer';
 import thunk from "redux-thunk";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import productsList from '../components/productsList';
+import { allCategoriesReducer } from '../reducer/allCategoriesReducer';
+import { isHomePageReducer } from '../reducer/isHomePageReducer';
 
 const reducer = combineReducers({
     cart:cartReducer,
-    productsList:productsListReducer
+    productsList:productsListReducer,
+    allCategories:allCategoriesReducer,
+    isHomePage:isHomePageReducer
 
 });
 
@@ -17,7 +21,15 @@ let initialState = {
     },
     productsList: {
            productsList,
-    }
+    },
+    allCategories: [        
+            "laptops",
+            "headphones",
+            "mobiles",
+            "shoes"
+           ],
+    isHomePage : false
+    
 }
 
 const middleware = [thunk];

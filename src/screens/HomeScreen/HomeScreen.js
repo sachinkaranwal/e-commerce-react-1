@@ -1,15 +1,23 @@
-import Navbar from "../../components/Navbar";
 import "office-ui-fabric-react/dist/css/fabric.css";
 import ProductCard from "../../components/ProductCard";
 import productsList from "../../components/productsList";
-import { Link } from "react-router-dom";
-import CategoriesLink from "../../components/CategoriesLink/CategoriesLink";
 import "./HomeScreen.css";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 const HomeScreen = ({ history }) => {
   const historyChangeHandler = (keyword) => {
     history.push(`/${keyword}`);
   };
+
+  const dispatch = useDispatch()
+  useEffect( () => {
+     dispatch({type:"SET_HOMEPAGE"})
+     return (() => {
+      dispatch({type:"SET_NOTHOMEPAGE"})
+     })
+  }, [])
+
   return (
     <div>
       <div className="sliderSection">
