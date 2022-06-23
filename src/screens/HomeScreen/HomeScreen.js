@@ -1,6 +1,6 @@
 import "office-ui-fabric-react/dist/css/fabric.css";
-import ProductCard from "../../components/ProductCard";
-import productsList from "../../components/productsList";
+import ProductCard from "../../components/ProductCard/ProductCard";
+import productsList from "../../components/productsList/productsList";
 import "./HomeScreen.css";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";

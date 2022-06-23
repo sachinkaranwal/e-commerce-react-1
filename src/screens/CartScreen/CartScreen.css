@@ -1,0 +1,26 @@
+.cart {
+    display: flex;
+    margin: 45px 15px;
+}
+
+.cart-list{
+    display: flex;
+    width: 80%;
+    margin-right: 15px;
+    height: auto;
+}
+
+.cart-list-container{
+    width: 100%;
+    list-style: none;
+}
+
+.cart-action {
+    margin-top: 35px;
+    max-height: 60vh;
+    background: white;
+}
+
+.cart-action .totalPrice{
+    margin: 10px 15px;
+}

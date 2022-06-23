@@ -1,4 +1,4 @@
-import List from "../components/productsList";
+import List from "../components/productsList/productsList";
 
 const initialState = {allCategories:List.map( product => product.category)};
 

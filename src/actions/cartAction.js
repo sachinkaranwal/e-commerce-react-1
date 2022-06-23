@@ -2,7 +2,7 @@ import{
     ADD_TO_CART,
     REMOVE_CART_ITEM
 } from '../constants/cartConstants';
-import productsList from '../components/productsList';
+import productsList from '../components/ProductsList/productsList';
 
 
 export const addItemsToCart = (id,quantity) => (dispatch,getState) =>{

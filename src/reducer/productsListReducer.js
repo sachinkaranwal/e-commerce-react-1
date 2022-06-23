@@ -4,7 +4,7 @@ import{
     SORT_HIGH_TO_LOW,
     SORT_LOW_TO_HIGH
 } from '../constants/productListConstants';
-import List from "../components/productsList";
+import List from "../components/productsList/productsList";
 
 const initialState = {productsList:List};
 

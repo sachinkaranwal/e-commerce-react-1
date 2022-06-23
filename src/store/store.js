@@ -3,7 +3,7 @@ import { cartReducer } from '../reducer/cartReducer';
 import { productsListReducer } from '../reducer/productsListReducer';
 import thunk from "redux-thunk";
 import { composeWithDevTools } from 'redux-devtools-extension';
-import productsList from '../components/productsList';
+import productsList from '../components/productsList/productsList';
 import { allCategoriesReducer } from '../reducer/allCategoriesReducer';
 import { isHomePageReducer } from '../reducer/isHomePageReducer';
 

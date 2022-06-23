@@ -3,8 +3,8 @@ import "./App.css";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
 import CheckoutScreen from "./screens/CheckoutScreen";
-import CartScreen from "./screens/CartScreen";
-import SearchScreen from "./screens/SearchScreen";
+import CartScreen from "./screens/CartScreen/CartScreen";
+import SearchScreen from "./screens/SearchScreen/SearchScreen";
 import ProductScreen from "./screens/ProductScreen/ProductScreen";
 import Header from "./components/Header/Header";
 

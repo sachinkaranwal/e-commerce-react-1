@@ -1,11 +1,11 @@
 import "office-ui-fabric-react/dist/css/fabric.css";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../../components/ProductCard/ProductCard";
 import { Select } from "@copart/core-components";
 import { useEffect, useState } from "react";
-import { getProductsList } from "../actions/productsListAction";
+import { getProductsList } from "../../actions/productsListAction";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { brandOptions, pricingOptions } from "../constants/selectBarConstants";
+import { brandOptions, pricingOptions } from "../../constants/selectBarConstants";
 import "./SearchScreen.css";
 
 const SearchScreen = () => {

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 const Navbar = (props) => {
   const history = useHistory();  
   const allCategories = useSelector((state) => state.allCategories);
+  const isHomePage = useSelector((state) => state.isHomePage);
   const cartCount = useSelector((state) => state.cart.cartItems.length);
   const [searchKeyword, setSearchKeyword] = useState("");
   const [searchedCategory, setSearchedCategory] = useState("");
@@ -38,7 +39,7 @@ const Navbar = (props) => {
         </Link>
         <div className="searchbar">
           <SearchBar
-            searchText={""}
+            searchText={searchKeyword}
             searchTypes={[
               { key: "laptops", text: "Laptops" },
               { key: "headphones", text: "Headphones" },
