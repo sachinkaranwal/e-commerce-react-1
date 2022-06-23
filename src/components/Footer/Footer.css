@@ -1,0 +1,39 @@
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    background-color: #3a4468;
+    color: #ffffff;
+    padding: 90px 30px 45px 30px;
+}
+
+.footerContact{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerInfo{
+    width:200px;
+}
+
+.footerForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerEnd{
+    display: flex;
+    justify-content: center;
+    background-color: #3a4468;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.footerContainer .heading{
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}

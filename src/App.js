@@ -7,6 +7,7 @@ import CartScreen from "./screens/CartScreen/CartScreen";
 import SearchScreen from "./screens/SearchScreen/SearchScreen";
 import ProductScreen from "./screens/ProductScreen/ProductScreen";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           exact
         /> */}
       </Switch>
+      <Footer />
     </div>
   );
 }
