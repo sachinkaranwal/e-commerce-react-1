@@ -1,11 +1,11 @@
 .CartItemCard {
     display: flex;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin-top: 15px;
     height: 8rem;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     box-sizing: border-box;
     background-color: white;
   }
@@ -21,6 +21,10 @@
     align-items: center;
     border: 1px solid;
     width: 8%;
+  }
+
+  .itemInfo{
+    min-width: 43%;
   }
 
   .itemQuantity {
